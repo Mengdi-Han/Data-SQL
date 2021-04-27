@@ -207,8 +207,7 @@ REFERENCES BOOKING_CHANNEL (Channel_id) ON DELETE CASCADE
 ### 1.1 The total spent for the customer for a particular stay
 (checkout invoice)
 ```
-select PAYMENT_ROOM_RESERVATION.Inovice_id,Reservation_id,Room_payment_a 
-mount,INVOICE.Guest_id,GUEST.First_name,Middle_name,Last_name 
+select PAYMENT_ROOM_RESERVATION.Inovice_id,Reservation_id,Room_payment_amount,INVOICE.Guest_id,GUEST.First_name,Middle_name,Last_name 
 from PAYMENT_ROOM_RESERVATION 
 left join INVOICE 
 on PAYMENT_ROOM_RESERVATION.Inovice_id=INVOICE.Invoice_id 
